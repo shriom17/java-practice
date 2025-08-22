@@ -1,3 +1,4 @@
+import java.util.*;
 public class Person {
     String name;
     int age;
@@ -65,13 +66,50 @@ class Doctor extends Person {
 }
 
 class Main {
-    public static void main(String[] args) {
-        Student s = new Student("Asish", 20, "BTech");
-        Teacher t = new Teacher("Debesh", 40, "Physics");
-        Doctor d = new Doctor("Chayan", 35, "Cardiology");
+   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    
+    System.out.print("Enter student name: ");
+    String studentName = scanner.nextLine();
+    
+    System.out.print("Enter student age: ");
+    int studentAge = scanner.nextInt();
+    scanner.nextLine(); 
+    System.out.print("Enter student course: ");
+    String studentCourse = scanner.nextLine();
+    
+    Student student = new Student(studentName, studentAge, studentCourse);
+    
 
-        s.displayDetails();
-        t.displayDetails();
-        d.displayDetails();
-    }
+    System.out.print("Enter teacher name: ");
+    String teacherName = scanner.nextLine();
+
+    System.out.print("Enter teacher age: ");
+    int teacherAge = scanner.nextInt();
+    scanner.nextLine();
+
+    System.out.print("Enter teacher subject: ");
+    String teacherSubject = scanner.nextLine();
+
+    Teacher teacher = new Teacher(teacherName, teacherAge, teacherSubject);
+    
+
+    System.out.print("Enter doctor name: ");
+    String doctorName = scanner.nextLine();
+
+    System.out.print("Enter doctor age: ");
+    int doctorAge = scanner.nextInt();
+    scanner.nextLine();
+
+    System.out.print("Enter doctor specialization: ");
+    String doctorSpecialization = scanner.nextLine();
+
+    Doctor doctor = new Doctor(doctorName, doctorAge, doctorSpecialization);
+    
+    student.displayDetails();
+    teacher.displayDetails();
+    doctor.displayDetails();
+
+    scanner.close();
+}
 }
