@@ -20,7 +20,7 @@ public abstract class Employee {
     public static void main(String[] args) {
         // Array of employees demonstrating polymorphism
         Employee[] employees = {
-            new FullTimeEmployee("Akash", 1, 50000.0),
+            new FullTimeEmployee("Akash", 1, 10000.0),
             new PartTimeEmployee("Bidyut", 2, 20.0, 80.0),
             new PartTimeEmployee("Shriom", 3, 15.5, 60.0)
         };
