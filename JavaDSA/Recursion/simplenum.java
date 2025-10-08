@@ -25,6 +25,17 @@ public class simplenum {
             return n * factorial(n-1);  // Recursive case
         }
     }
+    public static int sum(int arr[], int n)
+    {
+        if(n<=0)
+        {
+            return 0;
+        }
+        else
+        {
+            return arr[n-1] + sum(arr,n-1);
+         }
+    }
     public static int power(int n, int p)
     {
         if(p==0)
@@ -34,6 +45,17 @@ public class simplenum {
         else
         {
             return n * power(n,p-1);
+        }
+    }
+    public static int count(int c)
+    {
+        if(c<=0)
+        {
+            return 0;
+        }
+        else
+        {
+            return 1 + count(c/10);
         }
     }
     public static void main(String[] args) 
@@ -49,5 +71,10 @@ public class simplenum {
         System.out.println("Enter the power of n:");
         int p = sc.nextInt();
         System.out.println(n + " raised to power " + p + " is: " + power(n,p));
+        System.out.println("Sum of first " + n + " natural numbers is: " + sum(arr,n));
+        System.out.println("Enter a number to count digits:");
+        int c = sc.nextInt();
+        System.out.println("Number of digits in " + c + " is: " + count(c));
+        sc.close();
     }
 }
