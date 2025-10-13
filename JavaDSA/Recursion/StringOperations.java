@@ -24,6 +24,28 @@ public class StringOperations {
             return Arrays.equals(arr1, arr2);
         }
     }
+    public boolean isPalindrome(String s3)
+    {
+        String reversed = reverse(s3);
+        return s3.equals(reversed);
+    }
+    public String checkRepeat(String s1)
+    {
+        Set<Character> charSet = new HashSet<>();
+        StringBuilder duplicates = new StringBuilder();
+        for(char c : s1.toCharArray())
+        {
+            if(charSet.contains(c) && !duplicates.toString().contains(String.valueOf(c)))
+            {
+                duplicates.append(c);
+            }
+            else
+            {
+                charSet.add(c);
+            }
+        }
+        return duplicates.toString();
+    }
 
     public static void main(String[] args)
     {
@@ -37,5 +59,9 @@ public class StringOperations {
         String s2 = new Scanner(System.in).nextLine();
         boolean isAnagram = obj.isAnagram(s1, s2);
         System.out.println("Is anagram: " + isAnagram);
+        System.out.println("Enter the third string to check for palindrome:");
+        String s3 = new Scanner(System.in).nextLine();
+        System.out.println("Is palindrome: " + obj.isPalindrome(s3));
+        System.out.println("Repeating characters: " + obj.checkRepeat(s1));
     }
 }
