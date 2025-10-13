@@ -58,6 +58,21 @@ public class simplenum {
             return 1 + count(c/10);
         }
     }
+    public static int fibo(int s)
+    {
+        if(s==0)
+        {
+            return 0;
+        }
+       else if(s==1)
+        {
+            return 1;
+        } 
+        else
+        {
+            return fibo(s-1) + fibo(s-2);
+        }
+    }
     public static void main(String[] args) 
     {
         int[] arr;
@@ -75,6 +90,9 @@ public class simplenum {
         System.out.println("Enter a number to count digits:");
         int c = sc.nextInt();
         System.out.println("Number of digits in " + c + " is: " + count(c));
+        System.out.println("Enter a number to find Fibonacci:");
+        int s = sc.nextInt();
+        System.out.println("Fibonacci of " + s + " is: " + fibo(s));
         sc.close();
     }
 }
