@@ -25,6 +25,17 @@ public class simplenum {
             return n * factorial(n-1);  // Recursive case
         }
     }
+    public static int product(int arr[], int n)
+    {
+        if(n<=0)
+        {
+            return 1;
+        }
+        else
+        {
+            return arr[n-1] * product(arr,n-1);
+         }
+        }
     public static int sum(int arr[], int n)
     {
         if(n<=0)
@@ -93,6 +104,7 @@ public class simplenum {
         System.out.println("Enter a number to find Fibonacci:");
         int s = sc.nextInt();
         System.out.println("Fibonacci of " + s + " is: " + fibo(s));
+        System.out.println("Product of first " + n + " natural numbers is: " + product(arr,n));
         sc.close();
     }
 }
