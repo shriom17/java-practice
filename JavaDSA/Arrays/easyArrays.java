@@ -24,6 +24,22 @@ public class easyArrays {
         }
         return max;
     }
+    public static int frq(int[] arr, int n)
+    {
+        int freq=0;
+        for(int i=0; i<n; i++)
+        {
+            for(int j=i+1; j<=n; j++)
+            {
+                if(arr[i]==arr[j])
+                {
+                    freq++;
+                }
+            }
+        }
+        return freq;
+    }
+    public static int  
     public static void main(String[] args) {
         int[] arr;
         System.out.println("Enter the size of array:");
@@ -42,6 +58,7 @@ public class easyArrays {
         }
         System.out.println("\nCount of Odd Numbers: " + countODD(arr));
         System.out.println("Maximum Number: " + maxx(arr, n));
+        System.out.println("Frequency of Numbers: " + frq(arr, n));
         sc.close();
     }
 }
