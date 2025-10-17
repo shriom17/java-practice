@@ -44,7 +44,12 @@ public class mergeArray {
         {
             System.out.print(merge[i] + " ");
         }
-        
+        Arrays.sort(merge);
+        System.out.println("\nThe Sorted Merged Array is: ");
+        for(int i=0; i<n+m; i++)
+        {
+            System.out.print(merge[i] + " ");
+        }
         sc.close();
     }
     
